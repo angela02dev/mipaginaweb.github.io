@@ -13,7 +13,7 @@
 		}
 	#miCanvas{
 			border: dotted 2px yellow;
-			background: black;
+			background: darkblue;
 			}
 </style>
 <script>
@@ -34,7 +34,7 @@
 
 	var teclaPulsada = null;
 	var tecla = [];
-	var colorBala = "blue";
+	var colorBala = "red";
 	var balas_array = new Array();
 	var enemigos_array = new Array();
 	var balasEnemigas_array = new Array();
@@ -142,7 +142,7 @@ FUNCIONES
 		}
 		function mensaje(cadena){
 			var lon = (canvas.width-(53*cadena.length))/2;
-			ctx.fillStyle ="green";
+			ctx.fillStyle ="yellow";
 			ctx.clearRect(0,0,canvas.width, canvas.height);
 			ctx.font = "bold 50px Rosewood Std";
 			ctx.fillText(cadena,lon,220);
@@ -288,7 +288,7 @@ INICIO
 				imagenEnemigo = new Image();
 				imagenEnemigo.src = "imagenes/invader.fw.png";
 				imagen.src = "imagenes/torre.fw.png";
-				mensaje("INVASORE");
+				mensaje("INVASORES");
 				intro.play();
 				imagen.onload = function(){
 					jugador = new Jugador(0);
@@ -312,7 +312,8 @@ INICIO
 </script>
 </head>
 	<body>
-		<h1>Bienvenido a mi pagina Invaders</h1>
+		<h1>Bienvenido a Invaders</h1>
+
 		<canvas id="miCanvas" width="600px" height="500px">
 			Tu navegador no soporta CANVAS
 		</canvas>
@@ -332,6 +333,10 @@ INICIO
 			<source src="sonidos/gameOver.mp3">
 				<source src="sonidos/gameOver.ogg">
 		</audio>
+		<footer id="footer">
+			<h3>&copy;Desarrollado por Angela Beltran 2021, Universitaria de Colombia
+		</h3></footer>
+		
 	</body>
 
 </HTML>
